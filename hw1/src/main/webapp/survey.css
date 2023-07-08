@@ -1,0 +1,111 @@
+.css-grid-def{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr;
+    column-gap: 5px;
+}
+
+.info-block{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+}
+
+.survey-block{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+    padding-left: 20px;
+}
+
+.raffle-block{
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    padding-left: 10px;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+}
+
+.checkboxes input{
+    margin: 0 2px 0 5px;
+}
+
+  
+input[type="radio"]{
+    margin: 0 1px 0 5px;
+}
+
+#outside {
+    background-color: rgb(220, 216, 216);     /*  #f1f1f1; */
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+  
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 94%;
+    /* To see the limits of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+#survey-form {
+    background-color: white;
+}
+
+.header {
+    color: #ffcc33;
+    background-color: #006633;
+    padding: 8px;
+    text-align: center;
+}
+ 
+  /* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: black;
+}
+  
+  /* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px 11px;
+    text-decoration: none;
+}
+
+button {
+    font-family: Lusitana;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+    margin-left:4px;
+}
+
+.back-button {
+    margin-right:4px;
+}
+
+input[type=text]{
+    display: block;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: rgb(100, 100, 100);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
