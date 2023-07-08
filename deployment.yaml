@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cluster-1
+  labels: {app.kubernetes.io/managed-by: graphite-jenkins-gke}
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: cluster-1}
+  template:
+    metadata:
+      labels: {app: cluster-1}
+    spec:
+      containers:
+      - name: cluster-1
+        image: svobbili/swe645_hw2:latest
+        ports:
+        - {name: tomcat, containerPort: 8080}
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: swe645-hw2-service-account
+  labels: {app.kubernetes.io/managed-by: graphite-jenkins-gke}
+spec:
+  selector: {app: cluster-1}
+  ports:
+  - {name: tomcat, protocol: TCP, port: 8300, targetPort: 8080}
+  type: LoadBalancer
